@@ -9,8 +9,18 @@ import {
 } from '@chakra-ui/react'
 import Container from "../components/Container"
 
+import { getSortedPostsData } from '../lib/posts';
 
-export default function Home() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Blog({ allPostsData }) {
   const {colorMode} = useColorMode()
   const colorSecondary = {
     light: 'gray.700',
@@ -36,11 +46,37 @@ export default function Home() {
           alignItems='flex-start'
           maxWidth='700px'
         >
+          {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+            <h2 className={utilStyles.headingLg}>Blog</h2>
+            <ul className={utilStyles.list}>
+            {allPostsData.map(({ id, date, title }) => (
+              <li className={utilStyles.listItem} key={id}>
+              {title}
+              <br />
+              {id}
+              <br />
+              {date}
+              </li>
+              ))}
+              </ul>
+            </section> */}
           <Heading mb={2}>
             Blog
           </Heading>
           <Text color={colorSecondary[colorMode]}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime modi voluptatibus repudiandae, tenetur eligendi autem eum provident, id, cumque voluptate nihil labore ullam numquam quo necessitatibus nulla eaque facere possimus?
+            <section>
+              <ul>
+              {allPostsData.map(({ id, date, title }) => (
+                <li key={id}>
+                  {title}
+                  <br />
+                  {id}
+                  <br />
+                  {date}
+                </li>
+                ))}
+              </ul>
+            </section>
           </Text>
         </Flex>
       </Stack>
