@@ -6,6 +6,7 @@ import {
     Box,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
+import Image from 'next/image';
 import styled from '@emotion/styled'
 import DarkModeSwitch from "../components/DarkModeSwitch" 
 
@@ -54,6 +55,17 @@ const Container = ({ children }) => {
         >
             <Box>
                 <NextLink href="/" passHref>
+                    <a>
+                    <Image
+                      priority
+                      src="/images/profile.jpg"
+                      height={50}
+                      width={50}
+                      alt="EtherFlow"
+                    />
+                    </a>
+                </NextLink>
+                <NextLink href="/" passHref>
                     <Button as="a" variant="ghost" p={[1,2,4]} _hover={{ backgroundColor: navHoverBg[colorMode] }}>
                         Home
                     </Button>
@@ -66,6 +78,7 @@ const Container = ({ children }) => {
             </Box>
             <DarkModeSwitch />
         </StickyNav>
+
         <Flex
             as="main"
             justifyContent="center"
@@ -78,6 +91,6 @@ const Container = ({ children }) => {
             {children} 
         </Flex>
     </>)
-} // anything within <Container> in index.js will go into the <Flex> section here
+} // anything within <Container> in index.js (and other pages) will go into the <Flex> section here
 
 export default Container

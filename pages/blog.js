@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link';
 // import Image from 'next/image'
 import {
   useColorMode,
@@ -68,11 +69,15 @@ export default function Blog({ allPostsData }) {
               <ul>
               {allPostsData.map(({ id, date, title }) => (
                 <li key={id}>
-                  {title}
+                  <Link href={`/blog/${id}`}>
+                    <a>
+                    {title}
+                    </a>
+                  </Link>
                   <br />
                   {id}
                   <br />
-                  {date}
+                  <Date dateString={date} />
                 </li>
                 ))}
               </ul>

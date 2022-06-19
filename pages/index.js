@@ -10,7 +10,7 @@ import {
 import Container from "../components/Container"
 
 
-export default function Home() {
+export default function Home( home ) {
   const {colorMode} = useColorMode()
   const colorSecondary = {
     light: 'gray.700',
@@ -43,6 +43,13 @@ export default function Home() {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime modi voluptatibus repudiandae, tenetur eligendi autem eum provident, id, cumque voluptate nihil labore ullam numquam quo necessitatibus nulla eaque facere possimus?
           </Text>
         </Flex>
+        {/* {!home && (
+            <div >
+              <Link href="/">
+                <a>← Back to home</a>
+              </Link>
+            </div>
+          )} */}
       </Stack>
     </Container>
   )
