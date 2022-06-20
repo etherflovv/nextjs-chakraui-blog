@@ -9,6 +9,7 @@ import {
   Stack
 } from '@chakra-ui/react'
 import Container from "../components/Container"
+import Date from '../components/date'
 
 import { getSortedPostsData } from '../lib/posts';
 
@@ -47,20 +48,7 @@ export default function Blog({ allPostsData }) {
           alignItems='flex-start'
           maxWidth='700px'
         >
-          {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-            <h2 className={utilStyles.headingLg}>Blog</h2>
-            <ul className={utilStyles.list}>
-            {allPostsData.map(({ id, date, title }) => (
-              <li className={utilStyles.listItem} key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-              </li>
-              ))}
-              </ul>
-            </section> */}
+
           <Heading mb={2}>
             Blog
           </Heading>

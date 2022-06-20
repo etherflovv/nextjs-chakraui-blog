@@ -37,7 +37,7 @@ export default function Home( home ) {
           maxWidth='700px'
         >
           <Heading mb={2}>
-            Hi, I'm EtherFlow
+            Hi, I&apos;m EtherFlow
           </Heading>
           <Text color={colorSecondary[colorMode]}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime modi voluptatibus repudiandae, tenetur eligendi autem eum provident, id, cumque voluptate nihil labore ullam numquam quo necessitatibus nulla eaque facere possimus?
