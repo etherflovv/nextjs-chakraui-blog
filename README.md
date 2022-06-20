@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Tutorial for (Static Pre-rendering for Blog pages)[https://nextjs.org/learn/basics/data-fetching/blog-data].
 
+Deployed at: https://nextjs-chakraui-blog.vercel.app/
+
 ## Getting Started
 
 First, run the development server:
