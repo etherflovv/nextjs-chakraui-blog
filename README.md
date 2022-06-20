@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Tutorial for (Static Pre-rendering for Blog pages)[https://nextjs.org/learn/basics/data-fetching/blog-data].
+
 ## Getting Started
 
 First, run the development server:
